@@ -1,7 +1,7 @@
 void main(List<String> args) {
   final delfin = new Delfin();
   final murcielago = new Murcielago();
-  delfin.nadar();
+  delfin.jugar();delfin.nadar();
   murcielago.volar();
 }
 
@@ -24,5 +24,7 @@ abstract class Caminador {
 }
 
 
-class Delfin extends Mamifero with Nadador{}
-class Murcielago extends Mamifero with Volador{}
+class Delfin extends Mamifero with Nadador{
+   jugar() => print("Puedo jugar");
+}
+class Murcielago extends Mamifero with Volador,Caminador{}
